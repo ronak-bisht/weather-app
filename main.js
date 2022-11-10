@@ -21,7 +21,7 @@ const getData=(city)=>{
 
 function displayWeather(data){
     cityName.innerText='Weather in '+data.name
-    temp.innerText=data.main.temp-273 + '*C'
+    temp.innerText=Math.round(data.main.temp-273) + '*C'
     humidity.innerText='Humidity: '+ data.main.humidity
     wind.innerText='Wind speed: '+ data.wind.speed
 }
